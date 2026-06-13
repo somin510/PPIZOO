@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이템 · 삐쥬 서버</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="cube"></span>삐쥬 서버</a>
+    <nav class="menu" id="menu">
+      <a href="jobs.html">직업</a>
+      <a href="adventure.html">모험</a>
+      <a href="items.html" class="active">아이템</a>
+      <a href="economy.html">경제</a>
+      <a href="customize.html">성장·꾸미기</a>
+      <a href="features.html">편의</a>
+      <a class="btn btn-primary" href="index.html#join">시작하기</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-label="메뉴">☰</button>
+  </div>
+</header>
+
+<section class="pagehero">
+  <div class="wrap reveal">
+    <div class="crumb"><a href="index.html">홈</a> › 아이템</div>
+    <div class="eyebrow">CUSTOM ITEMS</div>
+    <h1>커스텀 아이템 도감</h1>
+    <p>서버에서만 만날 수 있는 커스텀 아이템들. 악세서리부터 정수·스킬권·랜덤상자까지 한눈에 살펴보세요.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div id="gallery"></div>
+    <p style="color:#5a6489;font-size:.82rem;margin-top:10px">※ 이미지는 리소스팩 텍스처입니다. 이름을 바꾸거나 아이템을 추가/삭제하려면 이 파일 아래쪽 <code style="color:var(--muted)">DATA</code> 배열만 수정하면 됩니다.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html"><span class="cube"></span>삐쥬 서버</a>
+      <div class="links">
+        <a href="jobs.html">직업</a><a href="adventure.html">모험</a>
+        <a href="items.html">아이템</a><a href="economy.html">경제</a>
+        <a href="customize.html">성장·꾸미기</a><a href="features.html">편의</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 삐쥬 서버 · Minecraft Java 1.21 · 팬 콘텐츠이며 Mojang/Microsoft와 무관합니다.</div>
+  </div>
+</footer>
+
+<!-- ================== 아이템 데이터 (여기만 수정하면 됩니다) ================== -->
+<script>
+  // img = images/items/<여기>.png  ·  name = 표시 이름  ·  sub = 작은 보조 텍스트(선택)
+  const DATA = [
+    { cat:"악세서리", icon:"💍", desc:"귀걸이·목걸이·팔찌·반지 4부위, 각 5등급. 착용해 능력치를 강화합니다.", items:[
+      {img:"earringa",name:"귀걸이",sub:"Ⅰ"},{img:"earringb",name:"귀걸이",sub:"Ⅱ"},{img:"earringc",name:"귀걸이",sub:"Ⅲ"},{img:"earringd",name:"귀걸이",sub:"Ⅳ"},{img:"earringe",name:"귀걸이",sub:"Ⅴ"},
+      {img:"necklacea",name:"목걸이",sub:"Ⅰ"},{img:"necklaceb",name:"목걸이",sub:"Ⅱ"},{img:"necklacec",name:"목걸이",sub:"Ⅲ"},{img:"necklaced",name:"목걸이",sub:"Ⅳ"},{img:"necklacee",name:"목걸이",sub:"Ⅴ"},
+      {img:"braceleta",name:"팔찌",sub:"Ⅰ"},{img:"braceletb",name:"팔찌",sub:"Ⅱ"},{img:"braceletc",name:"팔찌",sub:"Ⅲ"},{img:"braceletd",name:"팔찌",sub:"Ⅳ"},{img:"bracelete",name:"팔찌",sub:"Ⅴ"},
+      {img:"ringa",name:"반지",sub:"Ⅰ"},{img:"ringb",name:"반지",sub:"Ⅱ"},{img:"ringc",name:"반지",sub:"Ⅲ"},{img:"ringd",name:"반지",sub:"Ⅳ"},{img:"ringe",name:"반지",sub:"Ⅴ"},
+    ]},
+    { cat:"정수", icon:"✦", desc:"던전에서 얻는 전투력 화폐. 등급이 높을수록 강력합니다.", items:[
+      {img:"essence_1",name:"정수",sub:"최하급"},{img:"essence_2",name:"정수",sub:"하급"},{img:"essence_3",name:"정수",sub:"중급"},{img:"essence_4",name:"정수",sub:"상급"},{img:"essence_5",name:"정수",sub:"최상급"},
+    ]},
+    { cat:"스킬 획득권", icon:"🎟️", desc:"전투 직업의 레벨별 스킬을 해금하는 이용권.", items:[
+      {img:"skill_10",name:"스킬 획득권",sub:"Lv.10"},{img:"skill_20",name:"스킬 획득권",sub:"Lv.20"},{img:"skill_30",name:"스킬 획득권",sub:"Lv.30"},
+      {img:"skill_40",name:"스킬 획득권",sub:"Lv.40"},{img:"skill_50",name:"스킬 획득권",sub:"Lv.50"},{img:"skill_60",name:"스킬 획득권",sub:"Lv.60"},
+    ]},
+    { cat:"경험치 물약", icon:"⚗️", desc:"마시면 경험치를 즉시 획득합니다.", items:[
+      {img:"exp_100",name:"경험치 물약",sub:"+100"},{img:"exp_200",name:"경험치 물약",sub:"+200"},{img:"exp_300",name:"경험치 물약",sub:"+300"},{img:"exp_400",name:"경험치 물약",sub:"+400"},
+    ]},
+    { cat:"생활 · 주문서", icon:"📜", desc:"이동·보관·생활 편의 아이템.", items:[
+      {img:"reture",name:"마을 귀환서"},{img:"home1",name:"집 설정 주문서"},{img:"home2",name:"집 귀환 주문서"},
+      {img:"inv_save",name:"인벤세이브권"},{img:"rd_cookie",name:"리본 당근 쿠키"},{img:"herb_hoe",name:"약초 호미"},
+    ]},
+    { cat:"화폐 · 교환권", icon:"🪙", desc:"거래와 교환에 쓰이는 재화/이용권.", items:[
+      {img:"ppizoo_coin",name:"삐쥬 코인"},{img:"check",name:"수표"},{img:"usershop",name:"상점 개설권"},
+      {img:"petcoupon",name:"펫 교환권"},{img:"cmcoupon",name:"교환 쿠폰"},
+      {img:"coupon_1",name:"쿠폰",sub:"Ⅰ"},{img:"coupon_2",name:"쿠폰",sub:"Ⅱ"},{img:"coupon_3",name:"쿠폰",sub:"Ⅲ"},{img:"coupon_4",name:"쿠폰",sub:"Ⅳ"},{img:"coupon_5",name:"쿠폰",sub:"Ⅴ"},
+    ]},
+    { cat:"랜덤 상자 · 열쇠", icon:"🎁", desc:"열어서 보상을 얻는 상자와 그 열쇠.", items:[
+      {img:"basic_box",name:"기본 상자"},{img:"special_box",name:"스페셜 상자"},{img:"enchant_box",name:"인챈트 상자"},{img:"coupon_chest",name:"쿠폰 상자"},
+      {img:"a_box",name:"A 상자"},{img:"b_box",name:"B 상자"},{img:"c_box",name:"C 상자"},{img:"s_box",name:"S 상자"},
+      {img:"akey",name:"A 열쇠"},{img:"bkey",name:"B 열쇠"},{img:"ckey",name:"C 열쇠"},{img:"skey",name:"S 열쇠"},
+    ]},
+    { cat:"강화 · 기타", icon:"⚒️", desc:"강화석과 특수 아이템.", items:[
+      {img:"estone",name:"강화석"},{img:"ecstone",name:"상급 강화석"},{img:"enchlemp",name:"인챈트 램프"},{img:"lottery",name:"복권"},{img:"health",name:"회복약"},
+    ]},
+  ];
+
+  // ---- 등급 장비 70종 자동 생성 (다이아/네더라이트 · 검/도끼/곡괭이/호미/삽 · 1~7단계) ----
+  const _tools=[["검","sword"],["도끼","axe"],["곡괭이","pickaxe"],["호미","hoe"],["삽","shovel"]];
+  const _mats=[["다이아","diamond"],["네더라이트","netherite"]];
+  const _gear=[];
+  _mats.forEach(([mk,me])=>_tools.forEach(([tk,te])=>{ for(let i=1;i<=7;i++) _gear.push({img:`${me}_${te}_${i}`,name:`${mk} ${tk}`,sub:`${i}단계`}); }));
+  DATA.push({ cat:"등급 장비", icon:"⚔️", desc:"단계가 오를수록 강해지는 장비. 검·도끼·곡괭이·호미·삽 × 다이아/네더라이트 × 1~7단계.", items:_gear });
+
+  // ---- 렌더링 ----
+  const tex = img => `images/items/${img}.png`;
+  const card = it => `<div class="itemcard reveal"><img class="tex" src="${tex(it.img)}" alt="${it.name}" loading="lazy" onerror="this.style.opacity='.12'"><span class="nm">${it.name}</span>${it.sub?`<span class="sub">${it.sub}</span>`:''}</div>`;
+  document.getElementById('gallery').innerHTML = DATA.map(c => `
+    <div class="itemcat">
+      <h2>${c.icon||''} ${c.cat} <span class="cnt">${c.items.length}종</span></h2>
+      ${c.desc?`<p class="desc">${c.desc}</p>`:''}
+      <div class="itemgrid">${c.items.map(card).join('')}</div>
+    </div>`).join('');
+</script>
+<script src="script.js"></script>
+</body>
+</html>

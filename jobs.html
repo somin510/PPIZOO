@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>직업 · 삐쥬 서버</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="cube"></span>삐쥬 서버</a>
+    <nav class="menu" id="menu">
+      <a href="jobs.html" class="active">직업</a>
+      <a href="adventure.html">모험</a>
+      <a href="items.html">아이템</a>
+      <a href="economy.html">경제</a>
+      <a href="customize.html">성장·꾸미기</a>
+      <a href="features.html">편의</a>
+      <a class="btn btn-primary" href="index.html#join">시작하기</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-label="메뉴">☰</button>
+  </div>
+</header>
+
+<section class="pagehero">
+  <div class="wrap reveal">
+    <div class="crumb"><a href="index.html">홈</a> › 직업</div>
+    <div class="eyebrow">JOBS</div>
+    <h1>7개의 직업, 끝없는 성장</h1>
+    <p>채집형 <b class="accent">생활 직업</b>과 전투형 <b class="accent">전투 직업</b>. 레벨을 올릴수록 10레벨마다 새 스킬이 열리고, 캐낸 자원엔 등급이 붙습니다.</p>
+  </div>
+</section>
+
+<!-- 생활 직업 -->
+<section class="block">
+  <div class="wrap">
+    <h2 class="subhead display reveal" style="font-size:1.4rem;color:var(--text)">⛏ 생활 직업</h2>
+    <div class="grid g4">
+      <div class="card reveal"><span class="ic">⛏</span><h3>광부</h3><p>광물을 캐며 성장. 깊이 있는 채굴 스킬로 효율을 극대화하세요.</p><div class="tags"><span class="tag">연쇄 채굴</span><span class="tag">즉시 주괴</span><span class="tag">행운의 손길</span><span class="tag">럭키 드롭</span></div></div>
+      <div class="card reveal"><span class="ic">🌾</span><h3>농부</h3><p>작물을 수확하며 성장. 범위 수확으로 대농장을 한 번에.</p><div class="tags"><span class="tag">범위 수확</span><span class="tag">자동 재배</span><span class="tag">수확량 2배</span><span class="tag">대지의 축복</span></div></div>
+      <div class="card reveal"><span class="ic">🎣</span><h3>어부</h3><p>물고기마다 크기(cm)와 등급. 대어를 노리는 손맛.</p><div class="tags"><span class="tag">더블 캐치</span><span class="tag">빠른 입질</span><span class="tag">보물 낚시</span><span class="tag">연속 콤보</span></div></div>
+      <div class="card reveal"><span class="ic">🪓</span><h3>목수</h3><p>나무를 베며 성장. 한 그루를 통째로 베는 벌채.</p><div class="tags"><span class="tag">성급함</span><span class="tag">벌채</span><span class="tag">묘목 자동 심기</span></div></div>
+    </div>
+    <!-- images/jobs.png -->
+    <figure class="shot reveal" data-img="jobs.png" style="margin-top:24px;min-height:200px"><img src="images/jobs.png" alt="" onerror="this.style.display='none'"></figure>
+  </div>
+</section>
+
+<!-- 전투 직업 -->
+<section class="block alt">
+  <div class="wrap">
+    <h2 class="subhead display reveal" style="font-size:1.4rem;color:var(--text)">⚔ 전투 직업</h2>
+    <div class="grid g3">
+      <div class="card reveal"><span class="ic">⚔️</span><h3>검사</h3><p>근접 전투 특화. 화려한 검술로 적을 베어넘깁니다.</p><div class="tags"><span class="tag">검격</span><span class="tag">광속 베기</span><span class="tag">잔상 베기</span><span class="tag">선풍참</span><span class="tag">매화검</span></div></div>
+      <div class="card reveal"><span class="ic">🏹</span><h3>궁수</h3><p>원거리 특화. 강력한 사격으로 적을 제압합니다.</p><div class="tags"><span class="tag">연사</span><span class="tag">관통</span><span class="tag">화살비</span><span class="tag">별똥별</span></div></div>
+      <div class="card reveal"><span class="ic">🪓</span><h3>도끼전사</h3><p>강력한 한 방. 묵직한 도끼로 광역을 쓸어버립니다.</p><div class="tags"><span class="tag">대지 강타</span><span class="tag">광폭화</span><span class="tag">거대 도끼</span><span class="tag">드래곤</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 시스템 설명 -->
+<section class="block">
+  <div class="wrap split">
+    <div class="reveal">
+      <div class="eyebrow">SYSTEM</div>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.3rem)">레벨 · 스킬 · 등급</h2>
+      <p style="color:var(--muted);margin:12px 0 22px">직업은 활동할수록 성장하고, 성장에 따라 보상이 깊어집니다.</p>
+      <div class="featlist">
+        <div class="feat"><span class="fic">📈</span><div><h4>10레벨마다 스킬</h4><p>레벨 구간마다 새 스킬이 열려, 켜고 끄며 플레이 스타일을 조절</p></div></div>
+        <div class="feat"><span class="fic">💎</span><div><h4>등급 자원</h4><p>채집물에 D~Hidden 등급이 붙어 더 높은 가치로 거래</p></div></div>
+        <div class="feat"><span class="fic">🎟️</span><div><h4>스킬 획득권</h4><p>전투 스킬은 던전·퀘스트로 얻는 획득권으로 해금</p></div></div>
+      </div>
+    </div>
+    <figure class="shot reveal" data-img="jobs-skill.png"><img src="images/jobs-skill.png" alt="" onerror="this.style.display='none'"></figure>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html"><span class="cube"></span>삐쥬 서버</a>
+      <div class="links">
+        <a href="jobs.html">직업</a><a href="adventure.html">모험</a>
+        <a href="economy.html">경제</a><a href="customize.html">성장·꾸미기</a>
+        <a href="features.html">편의</a><a href="#">디스코드</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 삐쥬 서버 · Minecraft Java 1.21 · 팬 콘텐츠이며 Mojang/Microsoft와 무관합니다.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
